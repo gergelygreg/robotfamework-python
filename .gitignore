@@ -1,0 +1,31 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# ---- Robot Framework ----
+output.xml
+report.html
+log.html
+*.log
+.pabotsuitenames
+pabot_results/
+
+# ---- Test Resources (binaries & drivers) ----
+tests/resources/*.exe
+tests/resources/*.log
+
+# ---- OS Files ----
+.DS_Store
+Thumbs.db
+
+# ---- VS Code ----
+.vscode/
+*.code-workspace
+
+# ---- Environments ----
+.env
+venv/
+.envrc
