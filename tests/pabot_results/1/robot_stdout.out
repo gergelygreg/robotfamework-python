@@ -1,0 +1,9 @@
+==============================================================================
+testEndToEnd :: To validate Items are added to Cart and Checkout              
+==============================================================================
+Validate Cards display in the Shopping Page                           | PASS |
+------------------------------------------------------------------------------
+testEndToEnd :: To validate Items are added to Cart and Checkout      | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\Gergely\Desktop\GitRepo\robotframework-python\tests\pabot_results\1\output.xml

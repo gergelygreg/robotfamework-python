@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.7 on win32)" generated="2025-09-20T00:55:58.033116" rpa="false" schemaversion="5">
+<suite id="s1" name="testEndToEnd" source="C:\Users\Gergely\Desktop\GitRepo\robotframework-python\tests\testEndToEnd.robot">
+<test id="s1-t1" name="Validate UnSuccessful Login" line="21">
+<kw name="Open the browser with the Mortgage payment url" owner="generic" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-20T00:55:58.309960" level="INFO">Opening browser 'firefox' to base url 'https://rahulshettyacademy.com/loginpagePractise'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-20T00:55:58.309960" elapsed="7.838202"/>
+</kw>
+<arg>firefox</arg>
+<status status="PASS" start="2025-09-20T00:55:58.308959" elapsed="7.839203"/>
+</kw>
+<kw name="Fill the login Form" owner="LandingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-20T00:56:06.150165" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${user_name}</arg>
+<arg>True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-20T00:56:06.149162" elapsed="0.118245"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-09-20T00:56:06.268398" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2025-09-20T00:56:06.276401" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-20T00:56:06.268398" elapsed="0.016320"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-20T00:56:06.285719" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-20T00:56:06.284718" elapsed="0.095432"/>
+</kw>
+<arg>${user_name}</arg>
+<arg>${invalid_password}</arg>
+<status status="PASS" start="2025-09-20T00:56:06.149162" elapsed="0.230988"/>
+</kw>
+<kw name="Wait until Element is located in the page" owner="LandingPage">
+<kw name="Wait until element passed is located on the Page" owner="generic">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${page_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-20T00:56:06.381151" elapsed="2.106999"/>
+</kw>
+<arg>${Error_Message_Login}</arg>
+<status status="PASS" start="2025-09-20T00:56:06.381151" elapsed="2.106999"/>
+</kw>
+<status status="PASS" start="2025-09-20T00:56:06.380150" elapsed="2.108000"/>
+</kw>
+<kw name="Verify error message is correct" owner="LandingPage">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-20T00:56:08.499326" level="INFO">${result} = Incorrect username/password.</msg>
+<var>${result}</var>
+<arg>${Error_Message_Login}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-20T00:56:08.489151" elapsed="0.010175"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${Error_Message_Text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-09-20T00:56:08.499326" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2025-09-20T00:56:08.489151" elapsed="0.011175"/>
+</kw>
+<kw name="Close Browser Session" owner="generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-20T00:56:08.501324" elapsed="2.804152"/>
+</kw>
+<status status="PASS" start="2025-09-20T00:56:08.500326" elapsed="2.805150"/>
+</kw>
+<status status="PASS" start="2025-09-20T00:55:58.307960" elapsed="12.997516"/>
+</test>
+<doc>To validate Items are added to Cart and Checkout</doc>
+<status status="PASS" start="2025-09-20T00:55:58.050116" elapsed="13.256361"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testEndToEnd" id="s1" pass="1" fail="0" skip="0">testEndToEnd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

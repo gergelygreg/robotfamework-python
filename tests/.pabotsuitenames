@@ -1,0 +1,6 @@
+datasources:d22a5d4c22cf69fa1a29fc4c1454f69a26b01672
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:61e1bb453689df18b789937195be80ca41ea451f
+--test testEndToEnd.Validate UnSuccessful Login
+--test testEndToEnd.Validate Cards display in the Shopping Page
